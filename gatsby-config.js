@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config({ path: '.env' });
+
 module.exports = {
   siteMetadata: {
     title: "onehundreddays",
@@ -6,8 +10,18 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "CFPAT-Rc0-f0qtAVLT41vAjE1iJWsDPfxqZuOXJKwaT5upRPE",
-        spaceId: "",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        environment: process.env.CONTENTFUL_ENVIRONMENT
+      },
+    },
+    {
+    resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Change plugin default options here, e.g.:
+        // ssr: false
+        // displayName: false,
+        // minify: false
       },
     },
     "gatsby-plugin-sharp",
