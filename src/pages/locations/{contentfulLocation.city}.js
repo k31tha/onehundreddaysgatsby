@@ -1,8 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  text-transform: uppercase;
+`;
 
 export default function LocationComponent(props) {
-  return props.data.contentfulLocation.country + '|' + props.params.city 
+  return <section>
+  <h1>{props.params.city}</h1>
+  <ul>
+    <li>Country: {props.data.contentfulLocation.country}</li>
+  </ul>
+  </section>
 }
 
 

@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 const LocationsPage = (props) => {
     return (
-        <>
+        <section>
         <h1>Locations</h1>
         <ul>
         {props.data.allContentfulLocation.nodes.map(location => (
@@ -12,7 +12,7 @@ const LocationsPage = (props) => {
         </li>
       ))}
         </ul>
-        </>
+        </section>
       )
 }
 

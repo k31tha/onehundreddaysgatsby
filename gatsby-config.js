@@ -9,6 +9,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "onehundreddays",
+    siteUrl: "https://onehundreddaysgatsby56043.gtsb.io/"
   },
   plugins: [
     {
@@ -30,7 +31,7 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
-    //"gatsby-plugin-sitemap",
+    "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
