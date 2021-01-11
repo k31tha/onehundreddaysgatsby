@@ -7,10 +7,11 @@ const Title = styled.h1`
 `;
 
 export default function LocationComponent(props) {
+  const location = props.data.location;
   return <section>
   <h1>{props.params.city}</h1>
   <ul>
-    <li>Country: {props.data.contentfulLocation.country}</li>
+    <li>Country: {location.country}</li>
   </ul>
   </section>
 }
@@ -18,7 +19,7 @@ export default function LocationComponent(props) {
 
 export const query = graphql`
   query contentfulLocation($id: String) {
-    contentfulLocation(id: {eq: $id}) {
+    location: contentfulLocation(id: {eq: $id}) {
           id
           city
           country
