@@ -1,19 +1,28 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Box, Link, Container, Heading, List, ListItem } from '@chakra-ui/react';
+import { Link as GatsbyLink, graphql } from "gatsby"
 
 const LocationsPage = (props) => {
   const locations = props.data.locations.nodes;
     return (
-        <section>
-        <h1>Locations</h1>
-        <ul>
+      <>
+      <Box as="section" marginBottom="1.45rem">
+    <Container d="block" px="2rem" maxW="100%">
+      <Heading as="h2">Locations</Heading>
+      </Container>
+    </Box>
+      <Box as="section" marginBottom="1.45rem" p=".5rem 1rem">
+      <Container d="block" px="2rem" maxW="100%">
+        <List>
         {locations.map(location => (
-        <li key={location.city}>
-          <Link to={location.locationPath}>{location.city}</Link> 
-        </li>
+        <ListItem key={location.city}>
+          <Link as={GatsbyLink} to={location.locationPath}>{location.city}</Link> 
+        </ListItem>
       ))}
-        </ul>
-        </section>
+        </List>
+        </Container>
+        </Box>
+        </>
       )
 }
 

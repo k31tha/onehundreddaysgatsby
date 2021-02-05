@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import { Box, Link, List, ListItem } from '@chakra-ui/react';
+import { Link as GatsbyLink } from 'gatsby';
+
+/*import styled from 'styled-components';
 const NavStyles = styled.nav`
   ul {
     margin: 0;
@@ -15,22 +17,33 @@ const NavStyles = styled.nav`
     text-decoration: none;
     display: block;
   }
-`;
+`;*/
 
 export default function Nav() {
     return (
-      <NavStyles>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about/">About</Link>
-          </li>
-          <li>
-            <Link to="/locations">Locations</Link>
-          </li>
-        </ul>
-      </NavStyles>
+      <Box as="nav" d="inline">
+        <List display="inline-flex" alignItems="center" justifyContent="flex-start">
+          <ListItem p="0 0.5rem">
+            <Link as={GatsbyLink} to="/" textDecoration="none" _hover={{
+    textDecoration:"none"
+  }}>Home</Link>
+          </ListItem>
+          <ListItem p="0 0.5rem">
+            <Link as={GatsbyLink}  to="/about/" _hover={{
+    textDecoration:"none"
+  }}>About</Link>
+          </ListItem>
+          <ListItem p="0 0.5rem">
+            <Link as={GatsbyLink}  to="/locations" textDecoration="none" _hover={{
+    textDecoration:"none"
+  }}>Locations</Link>
+          </ListItem>
+          <ListItem p="0 0.5rem">
+            <Link as={GatsbyLink}  to="/contact" textDecoration="none" _hover={{
+    textDecoration:"none"
+  }}>Contact</Link>
+          </ListItem>
+        </List>
+      </Box>
     );
   }

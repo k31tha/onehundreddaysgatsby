@@ -11,13 +11,40 @@ module.exports = {
     title: "onehundreddays",
     siteUrl: "https://onehundreddaysgatsby56043.gtsb.io/"
   },
+  flags: {
+    DEV_SSR: false
+  },
   plugins: [
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        /**
+         * @property {boolean} [isResettingCSS=true]
+         * if false, this plugin will not use `<CSSReset />
+         */
+        isResettingCSS: true,
+        /**
+         * @property {boolean} [isUsingColorMode=true]
+         * if false, this plugin will not use <ColorModeProvider />
+         */
+        isUsingColorMode: true,
+      },
+    },
     {
       resolve: "gatsby-source-contentful",
       options: {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         environment: process.env.CONTENTFUL_ENVIRONMENT
+      },
+    },
+    {
+      resolve: "gatsby-source-formium",
+      options: {
+        // Get your projectId from https://dashboard.formium.io
+        projectId: process.env.GATSBY_FORMIUM_PROJECTID,
+        // Generate a personal access token by going to https://dashboard.formium.io/account#tokens
+        accessToken: process.env.FORMIUM_TOKEN,
       },
     },
     {
@@ -29,10 +56,12 @@ module.exports = {
         // minify: false
       },
     },
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    //"gatsby-plugin-preact",
     {
       resolve: "gatsby-source-filesystem",
       options: {

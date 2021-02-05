@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop --verbose",
+    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
     "start": "npm run develop",
     "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
     "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
@@ -16,25 +16,36 @@
   },
   "license": "0BSD",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "@chakra-ui/gatsby-plugin": "^1.0.1",
+    "@chakra-ui/icons": "^1.0.3",
+    "@chakra-ui/react": "^1.1.5",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@formium/client": "^0.1.3",
+    "@formium/react": "^0.1.3",
     "babel-plugin-styled-components": "^1.12.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "framer-motion": "^3.2.2-rc.1",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.8.0",
+    "gatsby-plugin-image": "^0.7.1",
+    "gatsby-plugin-preact": "^4.7.0",
     "gatsby-plugin-react-helmet": "^3.7.0",
-    "gatsby-plugin-sharp": "^2.11.2",
+    "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-plugin-sitemap": "^2.9.0",
     "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-source-contentful": "^4.3.1",
-    "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-sharp": "^2.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "gatsby-source-filesystem": "^2.11.0",
+    "gatsby-source-formium": "^0.1.1",
+    "gatsby-transformer-sharp": "^2.12.0",
+    "preact": "^10.5.12",
+    "preact-render-to-string": "^5.1.12",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1",
-    "cross-env": "^7.0.3",
-    "esm": "^3.2.25"
+    "styled-components": "^5.2.1"
   },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }
