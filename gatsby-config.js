@@ -9,7 +9,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "onehundreddays",
-    siteUrl: "https://onehundreddaysgatsby56043.gtsb.io/"
+    siteUrl: "https://onehundreddaysgatsby56043.gtsb.io",
+    titleTemplate: "%s - onehundreddays",
+    description:
+      "100 days of gatsby",
+    image: "images/headphones-unsplash.jpg"
   },
   flags: {
     DEV_SSR: false

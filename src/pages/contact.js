@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { FormiumForm, defaultComponents  } from '@formium/react';
 import { formium } from '../lib/formium';
 import { Box, Container,Heading, Input, Textarea, Button } from "@chakra-ui/react"
+import SEO from '../components/seo';
 
 function TextInput(props) {
   return <Input  {...props}  className="my-textinput" focusBorderColor="blue.200"  />
@@ -40,6 +41,8 @@ const ContactPage = ({data}) => {
   }
 
   return (
+    <>
+    <SEO title={"contact us"}/>
     <Box as="section" marginBottom="1.45rem">
 <Container d="block" px="2rem" maxW="100%">
     <FormiumForm data={data.formiumForm} components={formComponents}
@@ -51,6 +54,7 @@ const ContactPage = ({data}) => {
     />
 </Container>
     </Box>
+    </>
   )
 }
 

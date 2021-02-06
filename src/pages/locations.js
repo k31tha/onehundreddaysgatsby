@@ -1,11 +1,13 @@
 import * as React from "react"
 import { Box, Link, Container, Heading, List, ListItem } from '@chakra-ui/react';
 import { Link as GatsbyLink, graphql } from "gatsby"
+import SEO from '../components/seo';
 
 const LocationsPage = (props) => {
   const locations = props.data.locations.nodes;
     return (
       <>
+      <SEO title={"locations"}/>
       <Box as="section" marginBottom="1.45rem">
     <Container d="block" px="2rem" maxW="100%">
       <Heading as="h2">Locations</Heading>
