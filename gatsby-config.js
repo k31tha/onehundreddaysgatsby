@@ -13,7 +13,7 @@ module.exports = {
     titleTemplate: "%s - onehundreddays",
     description:
       "100 days of gatsby",
-    image: "images/headphones-unsplash.jpg"
+    image: "/headphones-unsplash.jpg"
   },
   flags: {
     DEV_SSR: false
