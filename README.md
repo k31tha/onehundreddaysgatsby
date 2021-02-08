@@ -26,12 +26,11 @@ This repo contains progress made for each challenge/sprint.
 [Challenge/Sprint 2 Briefing](https://www.gatsbyjs.com/blog/challenge-2)
 
 * Added Chakra UI and started styling site using the components
-* Added a headphone image to header to explore gatsby-plugin-image. Need to add city scape images and change where headphone
-* displayed
+* Added a headphone image to home to explore gatsby-plugin-image. Added city scape images to locations
 * Added Contact Page using Formium - need to work on styling, have used Chakra components for form
 * Added Preact to replace React -- issue with loading spinner not disappearing
-* Progressive Web App capabilities - to do
-* Optimize for SEO - to do
+* Progressive Web App capabilities 
+* Optimize for SEO 
 
 #### Resources Used
 
