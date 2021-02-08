@@ -51,7 +51,12 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
          workboxConfig: {
-            globPatterns: ['**/icon-path*']
+            globPatterns: ['**/icon-path*'],
+            globIgnores: [
+              "/workbox-v4.3.1/.+(js|mjs)",
+              "/node_modules//*",
+              "/sw.js"
+            ]
          },
          precachePages: [`/*`, `/locations/*`],
       }
