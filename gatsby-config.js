@@ -35,6 +35,28 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `onehundreddaysofgatsby`,
+        short_name: `onehundreddays`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+        cache_busting_mode: 'none',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+         workboxConfig: {
+            globPatterns: ['**/icon-path*']
+         },
+         precachePages: [`/*`, `/locations/*`],
+      }
+   },
+    {
       resolve: "gatsby-source-contentful",
       options: {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,

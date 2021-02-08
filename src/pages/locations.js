@@ -36,8 +36,23 @@ export const query = graphql`
       country
       city
       locationPath: gatsbyPath(filePath: "/locations/{contentfulLocation.city}")
+      
+      heroImage {
+          fluid(maxWidth: 400) {
+            ...GatsbyContentfulFluid
+          }
         }
+      }
     }
   }`
+
+  /*
+  heroImage {
+        asset {
+          fluid(maxWidth: 400) {
+            ...GatsbySanityImageFluid
+          }
+        }
+        }*/
 
 export default LocationsPage
