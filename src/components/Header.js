@@ -1,5 +1,4 @@
 import { Box, Container, Heading } from '@chakra-ui/react';
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import ThemeToggle from './ThemeToggle';
 import Nav from './Nav';
@@ -18,9 +17,6 @@ export default function Header () {
             <ThemeToggle />
         </Box>
     <Box d="flex" flexDirection="row" alignItems="flex-start" justifyContent="flex-start" pt="2rem" pb="0.5rem" mb="1rem">
-        <Box pr="1em">
-        <StaticImage src="../images/headphones-unsplash.jpg" alt="headphones" height={100}/>
-        </Box>
         <Box pr="1em">      
             <Heading as="h1">100days</Heading>
         </Box>
