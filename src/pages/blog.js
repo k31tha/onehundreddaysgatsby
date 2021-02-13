@@ -1,0 +1,35 @@
+import * as React from "react";
+import { Box, Container, Heading } from "@chakra-ui/react";
+import { Link, graphql } from "gatsby";
+
+const BlogPage = ({ data }) => {
+  return (
+    <Box as="section" marginBottom="1.45rem">
+    <Container d="block" px="2rem" maxW="100%">
+      <Heading as="h2">100 days of Gatsby Blog</Heading>
+      <Heading as="h4">Posts</Heading>
+      {data.allWpPost.nodes.map(node => (
+        <Box as="div">
+        <Link to={node.slug}>
+            <p>{node.title}</p>
+          </Link>
+          <Box as="div" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+        </Box>
+      ))}
+      </Container>
+    </Box>
+  )
+}
+
+export const pageQuery = graphql`
+  query {
+    allWpPost(sort: { fields: [date] }) {
+      nodes {
+        title
+        excerpt
+        slug
+      }
+    }
+  }`
+
+export default BlogPage

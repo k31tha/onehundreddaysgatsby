@@ -96,5 +96,15 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        /*
+         * The full URL of the WordPress site's GraphQL API.
+         * Example : 'https://www.example-site.com/graphql'
+         */
+        url: `hgatsbyttp://audiocore.kdasoft.co.uk/graphql`,
+      },
+    },
   ],
 };

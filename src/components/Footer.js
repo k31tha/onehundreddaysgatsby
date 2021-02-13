@@ -16,7 +16,7 @@ export default function Footer() {
       <Box as="footer" h="50px" d="flex" justifyContent="space-around" p=".5rem 1rem" marginBottom="1.45rem" bg={bg} color={color}
       alignContent="center" borderTop="1px" borderColor="gray.200">      
         <Container as="section">
-        <Text>#100daysofgatsby 2021 sprint 2</Text>     
+        <Text>#100daysofgatsby 2021 sprint 3</Text>     
         </Container> 
       </Box>
     );
