@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Box, Container, Heading } from "@chakra-ui/react";
-import { Link, graphql } from "gatsby";
+import { Box, Container, Heading,Link } from "@chakra-ui/react";
+import { Link as GatsbyLink, graphql } from "gatsby";
 
 const BlogPage = ({ data }) => {
   return (
@@ -10,7 +10,7 @@ const BlogPage = ({ data }) => {
       <Heading as="h4">Posts</Heading>
       {data.allWpPost.nodes.map(node => (
         <Box as="div">
-        <Link to={node.slug}>
+        <Link as={GatsbyLink} to={node.slug}>
             <p>{node.title}</p>
           </Link>
           <Box as="div" dangerouslySetInnerHTML={{ __html: node.excerpt }} />
