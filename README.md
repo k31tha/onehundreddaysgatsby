@@ -41,3 +41,20 @@ This repo contains progress made for each challenge/sprint.
 * [Make site progressive](https://www.gatsbyjs.com/docs/progressive-web-app/)
 * [Optimise for SEO](https://www.gatsbyjs.com/docs/add-seo-component/)
 
+[Challenge/Sprint 3 Briefing](https://www.gatsbyjs.com/blog/100days-challenge-3/)
+
+* Added Gatsby WordPress Integration
+* Created a wordpress installation to blog posts
+* Integrated /blog end point to site
+* Yoast SEO added to wordpress, todo integrate with gatsby site
+* Added WPGraphQL extension for wordpress
+* Upgraded to V3 of gatsby
+* Todo Styling - only very basic 
+
+#### Resources Used
+
+* [Gatsby WordPress Integration](https://www.gatsbyjs.com/blog/wordpress-integration/)
+* [Gastby recommendations for hosting wordpress](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/docs/hosting.md)
+* [Yoast SEO Plugin](https://wordpress.org/plugins/wordpress-seo/)
+* [WPGraphQL seo extension to Wordpress](https://wordpress.org/plugins/add-wpgraphql-seo/)
+
