@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
+    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop --verbose",
     "start": "npm run develop",
     "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
     "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
@@ -41,6 +41,7 @@
     "gatsby-source-contentful": "^5.0.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-source-formium": "^0.1.1",
+    "gatsby-source-shopify-experimental": "^1.12.3",
     "gatsby-source-wordpress": "^5.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
     "preact": "^10.5.12",

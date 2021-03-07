@@ -61,6 +61,40 @@ resultcat.data.allWpCategory.nodes.forEach(node => {
     })
   })
 
+  const resultshop = await graphql(`
+    query {
+      allShopifyProduct(sort: { fields: [title] }) {
+        edges {
+          node {
+            title
+            shopifyId
+            handle
+            description
+            priceRangeV2 {
+              maxVariantPrice {
+                amount
+              }
+              minVariantPrice {
+                amount
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  // Iterate over all products and create a new page using a template
+  // The product "handle" is generated automatically by Shopify
+  resultshop.data.allShopifyProduct.edges.forEach(({ node }) => {
+    createPage({
+      path: `/shop/${node.handle}`,
+      component: path.resolve(`./src/templates/product.js`),
+      context: {
+        product: node,
+      },
+    })
+  })
+
   /*
   return graphql(`
     {

@@ -103,7 +103,16 @@ module.exports = {
          * The full URL of the WordPress site's GraphQL API.
          * Example : 'https://www.example-site.com/graphql'
          */
-        url: `hgatsbyttp://audiocore.kdasoft.co.uk/graphql`,
+        url: `http://audiocore.kdasoft.co.uk/graphql`,
+      },
+    },
+    {
+      resolve: "gatsby-source-shopify-experimental",
+      options: {
+        apiKey: process.env.SHOPIFY_ADMIN_API_KEY,
+        password: process.env.SHOPIFY_ADMIN_PASSWORD,
+        storeUrl: process.env.SHOPIFY_STORE_URL,
+        downloadImages: true,
       },
     },
   ],

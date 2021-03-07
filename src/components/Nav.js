@@ -44,6 +44,11 @@ export default function Nav() {
   }}>Blog</Link>
           </ListItem>
           <ListItem p="0 0.5rem">
+            <Link as={GatsbyLink}  to="/shop" textDecoration="none" _hover={{
+    textDecoration:"none"
+  }}>Shop</Link>
+          </ListItem>
+          <ListItem p="0 0.5rem">
             <Link as={GatsbyLink}  to="/contact" textDecoration="none" _hover={{
     textDecoration:"none"
   }}>Contact</Link>
