@@ -66,16 +66,36 @@ resultcat.data.allWpCategory.nodes.forEach(node => {
       allShopifyProduct(sort: { fields: [title] }) {
         edges {
           node {
-            title
-            shopifyId
+            id
             handle
             description
+            tags
+            storefrontId
+            title
+            variants {
+              id
+              price
+              sku
+              selectedOptions {
+                name
+                value
+              }
+            }
+            featuredImage {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(layout:FIXED, width:100)
+                }
+              }
+            }
             priceRangeV2 {
               maxVariantPrice {
                 amount
+                currencyCode
               }
               minVariantPrice {
                 amount
+                currencyCode
               }
             }
           }

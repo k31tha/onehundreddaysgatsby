@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Box, Container, Heading, Link } from "@chakra-ui/react"
+import { Box, Container, Heading, Link, List, ListItem, Text } from "@chakra-ui/react"
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link as GatsbyLink, graphql } from "gatsby";
 
@@ -8,18 +8,18 @@ const ShopPage = ({ data }) => {
     <Box as="section" marginBottom="1.45rem">
     <Container d="block" px="2rem" maxW="100%">
       <Heading as="h2">Shop</Heading>
-      <ul>
+      <List display="flex" alignItems="top" justifyContent="flex-start">
       {data.allShopifyProduct.edges.map(({ node }) => (
-        <li key={node.shopifyId}>
-          <h3>
+        <ListItem key={node.shopifyId} p="0 0.5rem">
+          <Heading as="h3">
             <Link as={GatsbyLink} to={`/shop/${node.handle}`}>{node.title}</Link>
             {" - "}${node.priceRangeV2.minVariantPrice.amount}
-          </h3>
+          </Heading>
           <GatsbyImage image={node.featuredImage.localFile.childImageSharp.gatsbyImageData} alt={node.featuredImage.altText} />
-          <p>{node.description}</p>
-        </li>
+          <Text>{node.description}</Text>
+        </ListItem>
       ))}
-    </ul>
+    </List>
       </Container>
     </Box>
   )
@@ -32,23 +32,37 @@ export const query = graphql`
     allShopifyProduct(sort: { fields: [title] }) {
       edges {
         node {
-          title
-          shopifyId
-          description
+          id
           handle
-          priceRangeV2 {
-            minVariantPrice {
-              amount
+          description
+          tags
+          storefrontId
+          title
+          variants {
+            id
+            price
+            sku
+            selectedOptions {
+              name
+              value
             }
           }
           featuredImage {
-            id
             localFile {
               childImageSharp {
-                gatsbyImageData(height: 100)
+                gatsbyImageData(layout:FIXED, width:100)
               }
             }
-            altText
+          }
+          priceRangeV2 {
+            maxVariantPrice {
+              amount
+              currencyCode
+            }
+            minVariantPrice {
+              amount
+              currencyCode
+            }
           }
         }
       }
