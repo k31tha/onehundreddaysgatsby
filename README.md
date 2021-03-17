@@ -58,3 +58,16 @@ This repo contains progress made for each challenge/sprint.
 * [Yoast SEO Plugin](https://wordpress.org/plugins/wordpress-seo/)
 * [WPGraphQL seo extension to Wordpress](https://wordpress.org/plugins/add-wpgraphql-seo/)
 
+[Challenge/Sprint 4 Briefing](https://www.gatsbyjs.com/blog/100days-challenge-4/)
+
+* Added Shopify ecommerce using new BETA integration plugin
+* Created a Shopify developer account
+* Added /shop route to display products and link through to basic product page 
+* Todo Styling - only very basic 
+* Todo Integrate checkout - not part of Challenge 
+
+#### Resources Used
+
+* [Shopify Developers signup page and resources](https://developers.shopify.com/)
+* [Gatsby Source Shopify Experimental plugin information](https://github.com/gatsbyjs/gatsby-source-shopify-experimental)
+* [Gatsby Source Shopify Experimental plugin step by step](https://github.com/gatsbyjs/gatsby-source-shopify-experimental/blob/master/README.md)

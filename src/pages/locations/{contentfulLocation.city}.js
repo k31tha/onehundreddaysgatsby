@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Box, Container, Heading, List, ListItem } from "@chakra-ui/react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import SEO from '../../components/seo';
 /*import styled from 'styled-components'*/
 

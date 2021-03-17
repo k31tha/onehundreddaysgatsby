@@ -1,7 +1,6 @@
 import * as React from "react"
-import { Box, Container, Heading, Link, List, ListItem } from "@chakra-ui/react"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Link as GatsbyLink, graphql } from "gatsby";
+import { Box, Container, Heading, List, ListItem } from "@chakra-ui/react"
+import { GatsbyImage } from 'gatsby-plugin-image';
 import SEO from '../components/seo';
 
 const Variants = ({variants}) => {

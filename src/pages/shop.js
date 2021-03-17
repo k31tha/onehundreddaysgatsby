@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Box, Container, Heading, Link, List, ListItem, Text } from "@chakra-ui/react"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link as GatsbyLink, graphql } from "gatsby";
 
 const ShopPage = ({ data }) => {

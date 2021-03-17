@@ -13,41 +13,41 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   }
-`)
+`) 
 
-result.data.allWpPost.nodes.forEach(node => {
-    createPage({
-      path: 'blog/'+node.slug,
-      component: path.resolve(`./src/templates/blog-post.js`),
-      context: {
-        // This is the $slug variable
-        // passed to blog-post.js
-        slug: node.slug,
-      },
-    })
-  })
+ result.data.allWpPost.nodes.forEach(node => {
+     createPage({
+       path: 'blog/'+node.slug,
+       component: path.resolve(`./src/templates/blog-post.js`),
+       context: {
+         // This is the $slug variable
+         // passed to blog-post.js
+         slug: node.slug,
+       },
+     })
+   })
 
-  const resultcat = await graphql(`
-  {
-    allWpCategory {
-        nodes {
-          count
-          description
-          id
-          name
-          slug
-          link
-          posts {
-            nodes {
-              slug
-              id
-              title
-            }
-          }
-        }
-      }
-  }
-`)
+const resultcat = await graphql(`
+   {
+     allWpCategory {
+         nodes {
+           count
+           description
+           id
+           name
+           slug
+           link
+           posts {
+             nodes {
+               slug
+               id
+               title
+             }
+           }
+         }
+       }
+   }
+ `)
 
 resultcat.data.allWpCategory.nodes.forEach(node => {
     createPage({
@@ -103,10 +103,12 @@ resultcat.data.allWpCategory.nodes.forEach(node => {
       }
     }
   `)
+
+  
   // Iterate over all products and create a new page using a template
   // The product "handle" is generated automatically by Shopify
-  resultshop.data.allShopifyProduct.edges.forEach(({ node }) => {
-    createPage({
+resultshop.data.allShopifyProduct.edges.forEach(({ node }) => {
+   createPage({
       path: `/shop/${node.handle}`,
       component: path.resolve(`./src/templates/product.js`),
       context: {
