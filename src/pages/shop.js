@@ -10,7 +10,7 @@ const ShopPage = ({ data }) => {
       <Heading as="h2">Shop</Heading>
       <List display="flex" alignItems="top" justifyContent="flex-start">
       {data.allShopifyProduct.edges.map(({ node }) => (
-        <ListItem key={node.shopifyId} p="0 0.5rem">
+        <ListItem key={node.id} p="0 0.5rem">
           <Heading as="h3">
             <Link as={GatsbyLink} to={`/shop/${node.handle}`}>{node.title}</Link>
             {" - "}${node.priceRangeV2.minVariantPrice.amount}
@@ -48,6 +48,7 @@ export const query = graphql`
             }
           }
           featuredImage {
+            altText
             localFile {
               childImageSharp {
                 gatsbyImageData(layout:FIXED, width:100)

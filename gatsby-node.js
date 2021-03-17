@@ -82,6 +82,7 @@ resultcat.data.allWpCategory.nodes.forEach(node => {
               }
             }
             featuredImage {
+              altText
               localFile {
                 childImageSharp {
                   gatsbyImageData(layout:FIXED, width:100)
