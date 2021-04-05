@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link as GatsbyLink } from "gatsby"
 import { Box, Container, Heading, Link, List, ListItem  } from "@chakra-ui/react";
 
-function BlogPostCat({categories}) {
+function WPBlogPostCat({categories}) {
     if (!categories.nodes.length)
     return (
         <></>
@@ -11,7 +11,7 @@ function BlogPostCat({categories}) {
         <List display="inline-flex" alignItems="center" justifyContent="flex-start">
             {categories.nodes.map(node => (
 <ListItem p="0 0.5rem">
-<Link as={GatsbyLink} to={'/blog'+node.link}>
+<Link as={GatsbyLink} to={'/myblog'+node.link}>
             <p>{node.name}</p>
           </Link>
 </ListItem>
@@ -20,7 +20,7 @@ function BlogPostCat({categories}) {
     )
 }
 
-export default function BlogPost({ data }) {
+export default function WPBlogPost({ data }) {
   const post = data.allWpPost.nodes[0]
   const cats = post.categories
   //console.log(post)
@@ -30,7 +30,7 @@ export default function BlogPost({ data }) {
       <Box as="div">
         <Heading as="h2">{post.title}</Heading>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        <BlogPostCat categories={cats}/>
+        <WPBlogPostCat categories={cats}/>
       </Box>
       </Container>
       </Box>

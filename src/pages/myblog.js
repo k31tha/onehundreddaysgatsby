@@ -2,7 +2,7 @@ import * as React from "react";
 import { Box, Container, Heading,Link } from "@chakra-ui/react";
 import { Link as GatsbyLink, graphql } from "gatsby";
 
-const BlogPage = ({ data }) => {
+const MyBlogPage = ({ data }) => {
   return (
     <Box as="section" marginBottom="1.45rem">
     <Container d="block" px="2rem" maxW="100%">
@@ -32,4 +32,4 @@ export const pageQuery = graphql`
     }
   }`
 
-export default BlogPage
+export default MyBlogPage

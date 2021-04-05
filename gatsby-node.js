@@ -17,8 +17,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
  result.data.allWpPost.nodes.forEach(node => {
      createPage({
-       path: 'blog/'+node.slug,
-       component: path.resolve(`./src/templates/blog-post.js`),
+       path: 'myblog/'+node.slug,
+       component: path.resolve(`./src/templates/wp-blog-post.js`),
        context: {
          // This is the $slug variable
          // passed to blog-post.js
@@ -51,8 +51,8 @@ const resultcat = await graphql(`
 
 resultcat.data.allWpCategory.nodes.forEach(node => {
     createPage({
-      path: 'blog'+node.link,
-      component: path.resolve(`./src/templates/blog-cat.js`),
+      path: 'myblog'+node.link,
+      component: path.resolve(`./src/templates/wp-blog-cat.js`),
       context: {
         // This is the $slug variable
         // passed to blog-post.js

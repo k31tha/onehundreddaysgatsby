@@ -71,3 +71,14 @@ This repo contains progress made for each challenge/sprint.
 * [Shopify Developers signup page and resources](https://developers.shopify.com/)
 * [Gatsby Source Shopify Experimental plugin information](https://github.com/gatsbyjs/gatsby-source-shopify-experimental)
 * [Gatsby Source Shopify Experimental plugin step by step](https://github.com/gatsbyjs/gatsby-source-shopify-experimental/blob/master/README.md)
+
+[Challenge/Sprint 5 Briefing](https://www.gatsbyjs.com/blog/100days-challenge-5/)
+
+* To add
+* Route taken in this branch (challenge-5) is to install gatsby-theme-blog into existing project
+* <span style="color: red;">abortive effort due to build error re webpack and html build</span>
+* <span style="color: red;">also numerous warnings re gatsby 2 compatability and deprecated gatsby-image</span>
+* 
+#### Resources Used
+
+* to add

@@ -89,6 +89,13 @@ module.exports = {
     "gatsby-transformer-sharp",
     //"gatsby-plugin-preact",
     {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        // basePath defaults to `/`
+        basePath: `/blog`,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
@@ -115,5 +122,14 @@ module.exports = {
         downloadImages: true,
       },
     },
+    //{
+    //  resolve: `gatsby-theme-blog`,
+    //  options: {
+        /*
+        - basePath defaults to `/`
+        */
+    //    basePath: `/blognew`,
+    //  },
+    //},
   ],
 };

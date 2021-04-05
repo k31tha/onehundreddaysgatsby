@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link as GatsbyLink } from "gatsby"
 import { Box, Container, Heading, Link } from "@chakra-ui/react";
 
-export default function BlogCat({ data }) {
+export default function WPBlogCat({ data }) {
   const cat = data.allWpCategory.nodes[0]
   const posts = cat.posts.nodes
   console.log(posts)
@@ -13,7 +13,7 @@ export default function BlogCat({ data }) {
         <Heading as="h2">{cat.name}</Heading>
         {posts.map(node => (
         <Box as="div">
-        <Link as={GatsbyLink} to={'/blog/'+node.slug}>
+        <Link as={GatsbyLink} to={'/myblog/'+node.slug}>
             <p>{node.title}</p>
           </Link>
         </Box>
